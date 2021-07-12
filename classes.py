@@ -13,32 +13,6 @@ class Best20:
         return result
 
 
-class Stock:
-
-    def __init__(self, ticker):
-        self.ticker = ticker
-        self._momentum_12_1 = Momentum_12_1()
-        self._momentum_12_2 = Momentum_12_2()
-        self._ma10 = MA10()
-        self._ep = EP()
-        self._index = Index()
-
-    def momentum_12_1(self):
-        return self._momentum_12_1.get(self.ticker)
-
-    def momentum_12_2(self):
-        return self._momentum_12_2.get(self.ticker)
-
-    def ma10(self):
-        return self._ma10.get(self.ticker)
-
-    def ep(self):
-        return self._ep.get(self.ticker)
-
-    def index(self):
-        return self._index.get()
-
-
 class Dj30:
 
     def __init__(self, strategy):
